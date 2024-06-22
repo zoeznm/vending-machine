@@ -1,0 +1,41 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #222;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+#streetlamp {
+  background-color: #ffcc33;
+  color: #222;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#stars-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0;
+  justify-content: space-between;
+}
+
+.star {
+  margin-left: 100px;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  border-radius: 50%;
+  margin: 5px;
+  transition: transform 1s ease-in-out;
+}

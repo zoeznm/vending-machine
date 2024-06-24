@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  color: #000;
+}
+main {
+  width: 1650px;
+  height: 1080px;
+  background-color: antiquewhite;
+  margin: 0 auto;
+}
+.title {
+  position: fixed;
+  width: 45%;
+  margin-top: 3%;
+  margin-left: 25%;
+}
+.sun {
+  position: fixed;
+  width: 8%;
+  margin-top: 2%;
+  margin-left: 85%;
+}
+.vending-machine {
+  width: 33%;
+  height: 60%;
+  background-color: #fff;
+  border: 1px solid black;
+}

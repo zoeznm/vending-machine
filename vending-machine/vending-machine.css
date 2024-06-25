@@ -8,17 +8,20 @@
 }
 
 .title {
+  margin-top: 50px;
   max-width: 50%;
   height: auto;
 }
 
 .sun {
+  margin-top: 50px;
   max-width: 8%;
   height: auto;
   margin-left: 50px;
 }
 
 .vending-machine {
+  margin-top: 80px;
   width: 100%;
   height: 600px;
   display: flex;
@@ -325,6 +328,56 @@
   bottom: 60px;
   width: 8%;
 }
+.animallamp_non {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+}
+.crimelamp_non {
+  position: fixed;
+  bottom: 60px;
+  left: 180px;
+}
+.radiationlamp_non {
+  position: fixed;
+  bottom: 60px;
+  left: 350px;
+}
+.timelamp_non {
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+}
+.spacelamp_non {
+  position: fixed;
+  bottom: 60px;
+  right: 400px;
+}
+.animallamp_light {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+}
+.crimelamp_light {
+  position: fixed;
+  bottom: 60px;
+  left: 180px;
+}
+.radiationlamp_light {
+  position: fixed;
+  bottom: 60px;
+  left: 350px;
+}
+.timelamp_light {
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+}
+.spacelamp_light {
+  position: fixed;
+  bottom: 60px;
+  right: 400px;
+} 
 
 /* 미디어 쿼리 추가 - 노트북 (최대 1200px) */
 @media screen and (max-width: 1200px) {

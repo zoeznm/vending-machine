@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -12,13 +14,13 @@ body, html {
   align-items: center;
   position: relative;
 }
-
+/* 
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -40px; /* 위로 이동할 거리 */
+  top: -40px;
 }
 
 .title {
@@ -29,7 +31,7 @@ body, html {
 .sun {
   max-width: 8%;
   height: auto;
-  margin-left: 50px; /* 이미지 간의 간격 */
+  margin-left: 50px; 
 }
 
 .vending-machine {
@@ -39,7 +41,7 @@ body, html {
   justify-content: center;
   align-items: center;
   position: relative;
- /* 위로 이동할 거리 */
+
 }
 .leg1 {
   position: absolute;
@@ -451,4 +453,768 @@ body, html {
   right: 400px;
   width: 8%;
   height: 50%;
+}
+.animallamp_light {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+  width: 8%;
+  height: 50%;
+}
+.crimelamp_light {
+  position: fixed;
+  bottom: 60px;
+  left: 180px;
+  width: 8%;
+  height: 55%;
+}
+.radiationlamp_light {
+  position: fixed;
+  bottom: 60px;
+  left: 350px;
+  width: 8%;
+  height: 50%;
+}
+.timelamp_light {
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+  width: 8%;
+  height: 55%;
+}
+.spacelamp_light {
+  position: fixed;
+  bottom: 60px;
+  right: 400px;
+  width: 8%;
+  height: 50%;
+} */
+ /* 기본 스타일 */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -40px;
+}
+
+.title {
+  max-width: 50%;
+  height: auto;
+}
+
+.sun {
+  max-width: 8%;
+  height: auto;
+  margin-left: 50px; 
+}
+
+.vending-machine {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.leg1, .leg2, .leg3 {
+  position: absolute;
+  bottom: -40px;
+  width: 35px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+}
+
+.machine {
+  position: relative;
+  width: 25%;
+  height: inherit;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: -100px 0px 0px black;
+}
+
+.product {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 250px;
+  height: 450px;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.blackbox1, .blackbox2, .blackbox3, .blackbox4, .blackbox5 {
+  position: absolute;
+  width: inherit;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.blackbox1 > div, .blackbox2 > div, .blackbox3 > div, .blackbox4 > div, .blackbox5 > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.blackbox1 > div:hover, .blackbox2 > div:hover, .blackbox3 > div:hover, .blackbox4 > div:hover, .blackbox5 > div:hover {
+  background-color: #F2A0AF;
+}
+
+.whitebox1, .whitebox2, .whitebox3, .whitebox4, .whitebox5 {
+  position: absolute;
+  width: inherit;
+  height: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+}
+
+.whitebox1 > div, .whitebox2 > div, .whitebox3 > div, .whitebox4 > div, .whitebox5 > div {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.whitebox1 > div:hover, .whitebox2 > div:hover, .whitebox3 > div:hover, .whitebox4 > div:hover, .whitebox5 > div:hover {
+  background-color: #F2A0AF;
+  color: #fff;
+}
+.blackbox1 {
+  position: absolute;
+  top: 15px;
+  width: inherit;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.blackbox1 > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+.blackbox1 > div:hover {
+  background-color: #F2A0AF;
+}
+.blackbox2 {
+  position: absolute;
+  top: 105px;
+  width: inherit;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.blackbox2 > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.blackbox2 > div:hover {
+  background-color: #E01212;
+}
+.blackbox3 {
+  position: absolute;
+  top: 195px;
+  width: inherit;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.blackbox3 > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.blackbox3 > div:hover {
+  background-color: #FFEA24;
+}
+.blackbox4 {
+  position: absolute;
+  top: 285px;
+  width: inherit;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.blackbox4 > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.blackbox4 > div:hover {
+  background-color: #733A26;
+}
+.blackbox5 {
+  position: absolute;
+  top: 375px;
+  width: inherit;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.blackbox5 > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.blackbox5 > div:hover {
+  background-color: #4333A6;
+}
+.whitebox1 {
+  position: absolute;
+  top: 80px;
+  width: inherit;
+  height: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+}
+.whitebox1 > div {
+  border:1px solid black ;
+  border-radius: 5px;
+}
+.whitebox1 > div:hover {
+  background-color: #F2A0AF;
+  color: #fff;
+}
+.whitebox2 {
+  position: absolute;
+  top: 170px;
+  width: inherit;
+  height: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+}
+.whitebox2 > div {
+  border:1px solid black ;
+  border-radius: 5px;
+}
+.whitebox2 > div:hover {
+  background-color: #E01212;
+  color: #fff;
+}
+.whitebox3 {
+  position: absolute;
+  top: 260px;
+  width: inherit;
+  height: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+}
+.whitebox3 > div {
+  border:1px solid black ;
+  border-radius: 5px;
+}
+.whitebox3 > div:hover {
+  background-color: #FFEA24;
+}
+.whitebox4 {
+  position: absolute;
+  top: 350px;
+  width: inherit;
+  height: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+}
+.whitebox4 > div {
+  border:1px solid black ;
+  border-radius: 5px;
+}
+.whitebox4 > div:hover {
+  background-color: #733A26;
+  color: #fff;
+}
+.whitebox5 {
+  position: absolute;
+  top: 440px;
+  width: inherit;
+  height: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+}
+.whitebox5 > div {
+  border:1px solid black ;
+  border-radius: 5px;
+}
+.whitebox5 > div:hover {
+  background-color: #4333A6;
+  color: #fff;
+}
+.animallamp_non {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+}
+.crimelamp_non {
+  position: fixed;
+  bottom: 60px;
+  left: 180px;
+}
+.radiationlamp_non {
+  position: fixed;
+  bottom: 60px;
+  left: 350px;
+}
+.timelamp_non {
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+}
+.spacelamp_non {
+  position: fixed;
+  bottom: 60px;
+  right: 400px;
+}
+.animallamp_light {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+}
+.crimelamp_light {
+  position: fixed;
+  bottom: 60px;
+  left: 180px;
+}
+.radiationlamp_light {
+  position: fixed;
+  bottom: 60px;
+  left: 350px;
+}
+.timelamp_light {
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+}
+.spacelamp_light {
+  position: fixed;
+  bottom: 60px;
+  right: 400px;
+} 
+.bigbox > div:nth-child(1) {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.bigbox > div:nth-child(2) {
+  position: absolute;
+  left: 26px;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.bigbox > div:nth-child(3) {
+  position: absolute;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.bigbox > div:nth-child(4) {
+  position: absolute;
+  top: 26px;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.bigbox > div:nth-child(5) {
+  position: absolute;
+  top: 26px;
+  left: 26px;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.bigbox > div:nth-child(6) {
+  position: absolute;
+  top: 26px;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.bigbox > div:nth-child(7) {
+  position: absolute;
+  bottom: 0;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.bigbox > div:nth-child(8) {
+  position: absolute;
+  bottom: 0;
+  left: 26px;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.bigbox > div:nth-child(9) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.left_box1 {
+  position: absolute;
+  top: 40px;
+  width: 100px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  right: 5px;
+}
+
+.screen {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 80px;
+  height: 120px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.insertbox {
+  position: absolute;
+  top: 140px;
+  left: 8px;
+  width: 80px;
+  height: 40px;
+  border: 2px solid black;
+}
+
+.insert {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 60px;
+  height: 20px;
+  background-color: black;
+}
+
+.left_box2 {
+  position: absolute;
+  top: 260px;
+  right: 5px;
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.innerbox {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 70px;
+  height: 40px;
+  background-color: black;
+}
+
+.bigbox {
+  position: absolute;
+  top: 50px;
+  width: 70px;
+  height: 70px;
+}
+
+.bigbox > div:nth-child(1), .bigbox > div:nth-child(2), .bigbox > div:nth-child(3), .bigbox > div:nth-child(4), .bigbox > div:nth-child(5), .bigbox > div:nth-child(6), .bigbox > div:nth-child(7), .bigbox > div:nth-child(8), .bigbox > div:nth-child(9) {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.outbox {
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+  width: 250px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.productbox {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  width: 200px;
+  height: 45px;
+  background-color: black;
+}
+
+.animallamp_non, .crimelamp_non, .radiationlamp_non, .timelamp_non, .spacelamp_non, .animallamp_light, .crimelamp_light, .radiationlamp_light, .timelamp_light, .spacelamp_light {
+  position: fixed;
+  bottom: 60px;
+  width: 8%;
+  height: 50%;
+}
+
+/* 미디어 쿼리 추가 */
+/* ! 제일 작은 사이즈  ! */
+@media screen and (max-width: 600px) {
+  .vending-machine {
+    height: 400px;
+  }
+
+  .leg1 {
+    left: -30px;
+  }
+
+  .leg2 {
+    left: 80px;
+  }
+
+  .leg3 {
+    right: 60px;
+  }
+
+  .machine {
+    width: 50%;
+  }
+
+  .product {
+    width: 200px;
+    height: 300px;
+  }
+
+  .left_box1 {
+    top: 40px;
+    height: 150px;
+  }
+
+  .screen {
+    width: 60px;
+    height: 90px;
+  }
+
+  .insertbox {
+    top: 100px;
+    height: 30px;
+  }
+
+  .left_box2 {
+    top: 200px;
+    height: 100px;
+  }
+
+  .innerbox {
+    width: 50px;
+    height: 30px;
+  }
+
+  .bigbox {
+    top: 30px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .outbox {
+    bottom: 5px;
+    width: 200px;
+    height: 60px;
+  }
+
+  .productbox {
+    top: 10px;
+    height: 25px;
+  }
+
+  .animallamp_non, .crimelamp_non, .radiationlamp_non, .timelamp_non, .spacelamp_non, .animallamp_light, .crimelamp_light, .radiationlamp_light, .timelamp_light, .spacelamp_light {
+    height: 40%;
+  }
+}
+/* ! 중간 사이즈 ! */
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  .vending-machine {
+    height: 500px;
+  }
+
+  .leg1 {
+    left: -20px;
+  }
+
+  .leg2 {
+    left: 70px;
+  }
+
+  .leg3 {
+    right: 50px;
+  }
+
+  .machine {
+    width: 35%;
+  }
+
+  .product {
+    width: 200px;
+    height: 400px;
+  }
+
+  .left_box1 {
+    top: 40px;
+    height: 180px;
+  }
+
+  .screen {
+    width: 70px;
+    height: 100px;
+  }
+
+  .insertbox {
+    top: 120px;
+    height: 35px;
+  }
+
+  .left_box2 {
+    top: 250px;
+    height: 120px;
+  }
+
+  .innerbox {
+    width: 60px;
+    height: 35px;
+  }
+
+  .bigbox {
+    top: 40px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .outbox {
+    bottom: 10px;
+    width: 220px;
+    height: 70px;
+  }
+
+  .productbox {
+    top: 15px;
+    height: 30px;
+  }
+
+  .animallamp_non, .crimelamp_non, .radiationlamp_non, .timelamp_non, .spacelamp_non, .animallamp_light, .crimelamp_light, .radiationlamp_light, .timelamp_light, .spacelamp_light {
+    height: 45%;
+  }
+}
+/* ! 최대 사이즈 ! */
+@media screen and (min-width: 1001px) {
+  .vending-machine {
+    height: 700px;
+  }
+
+  .leg1 {
+    left: -10px;
+  }
+
+  .leg2 {
+    left: 90px;
+  }
+
+  .leg3 {
+    right: 70px;
+  }
+
+  .machine {
+    width: 30%;
+  }
+
+  .product {
+    width: 300px;
+    height: 500px;
+  }
+
+  .left_box1 {
+    top: 40px;
+    right: 30px;
+    height: 200px;
+  }
+
+  .screen {
+    width: 80px;
+    height: 110px;
+  }
+
+  .insertbox {
+    top: 140px;
+    height: 40px;
+  }
+
+  .left_box2 {
+    top: 260px;
+    right: 30px;
+    height: 150px;
+  }
+
+  .innerbox {
+    width: 70px;
+    height: 40px;
+  }
+
+  .bigbox {
+    top: 50px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .outbox {
+    bottom: 10px;
+    width: 300px;
+    height: 80px;
+  }
+
+  .productbox {
+    left: 20px;
+    width: 250px;
+    top: 17px;
+    height: 45px;
+  }
+
+  .animallamp_non, .crimelamp_non, .radiationlamp_non, .timelamp_non, .spacelamp_non, .animallamp_light, .crimelamp_light, .radiationlamp_light, .timelamp_light, .spacelamp_light {
+    height: 50%;
+  }
 }

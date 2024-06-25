@@ -1,0 +1,224 @@
+/* Reset styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -40px;
+}
+
+.title {
+  margin-top: 50px;
+  max-width: 50%;
+  height: auto;
+}
+
+.sun {
+  margin-top: 50px;
+  max-width: 8%;
+  height: auto;
+  margin-left: 50px;
+}
+
+/* Main styles for the vending machine */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.vending-machine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;  /* 크기 증가 */
+  height: 650px;  /* 크기 증가 */
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-shadow: -80px 0px 0px black;
+  margin-top: 30px;
+}
+
+.machine {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+  height: 450px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.can {
+  width: 40px;  /* 크기 조정 */
+  height: 50px;  /* 크기 조정 */
+  background-color: white;
+  border-radius: 3px;
+  margin: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  bottom: -25px;  /* 라벨 위치 조정 */
+  font-size: 12px;
+  color: white;  /* 라벨 색상 흰색으로 조정 */
+}
+
+/* 동전 넣는 곳 스타일 */
+.coin-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;  /* 동전 넣는 부분 크기 조정 */
+  margin-left: 5px;
+}
+
+.screen {
+  width: 80px;
+  height: 100px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.slot {
+  width: 80px;
+  height: 30px;
+  background-color: #000;
+  margin-bottom: 10px;
+}
+
+.coin-label {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 음료수 나오는 곳 스타일 */
+.output {
+  width: 70%;  /* products와 너비를 같게 설정 */
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.output-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.legs {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  bottom: -10px;  /* 위치 조정 */
+}
+
+.leg {
+  width: 40px;
+  height: 20px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .vending-machine {
+    width: 80%;
+    height: auto;
+  }
+
+  .products {
+    height: auto;
+  }
+
+  .coin-slot {
+    margin-left: 10px;
+  }
+}
+/* Lamp container styles */
+.lamp-container {
+  position: absolute;
+  left: 20px; /* 자판기의 왼쪽 여백에 위치 */
+  top: 50%; /* 수직 가운데 정렬을 위한 기본 설정 */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.lamp-container div {
+  width: auto; /* 자식 요소 너비 자동 설정 */
+  display: flex;
+  justify-content: center;
+  margin-right: 10px; /* 각 이미지 사이의 간격 */
+}
+
+.lamp-container img {
+  width: auto;
+  height: auto;
+  max-width: 30%; /* 이미지의 최대 너비 설정 */
+  max-height: 100%; /* 이미지의 최대 높이 설정 */
+  object-fit: contain;
+  margin-left: 10px; /* 이미지 비율을 유지하며 컨테이너에 맞추도록 설정 */
+}
+
+@media (max-width: 768px) {
+  .lamp-container {
+    flex-direction: row;
+    justify-content: space-around;
+    left: 10px; /* 모바일에서 자판기의 왼쪽 여백에 위치 */
+  }
+
+  .lamp-container div {
+    margin-right: 0; /* 모바일에서 이미지 사이의 간격 제거 */
+    margin-bottom: 10px; /* 모바일에서 각 이미지 사이의 간격 */
+  }
+
+  .lamp-container img {
+    max-width: 10%; /* 모바일에서 이미지의 최대 너비 설정 */
+    max-height: auto; /* 모바일에서 이미지의 최대 높이 자동 설정 */
+  }
+}

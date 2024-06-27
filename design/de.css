@@ -1,31 +1,42 @@
 /* Reset styles */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   font-family: Arial, sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .image-container {
+  min-height: 19vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: -40px;
+  position: absolute;
+  z-index: 2;
 }
 
 .title {
-  margin-top: 50px;
   max-width: 50%;
   height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
 .sun {
-  margin-top: 50px;
   max-width: 8%;
   height: auto;
   margin-left: 50px;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  right: 3vw;
 }
 
 /* Main styles for the vending machine */
@@ -33,28 +44,43 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
   height: 100vh;
   background-color: #fff;
+}
+
+.vending-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end; /* Align items to the bottom */
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  padding-bottom: 10vh;
+  box-shadow: -80px 0px 0px black;
 }
 
 .vending-machine {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;  /* 크기 증가 */
-  height: 650px;  /* 크기 증가 */
+  width: 400px;
   background-color: #fff;
   border: 2px solid black;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+  position: relative; /* Ensure the legs are positioned correctly */
   box-shadow: -80px 0px 0px black;
-  margin-top: 30px;
 }
 
 .machine {
+  padding-top: 35px;
+
   display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 20px;
 }
@@ -63,13 +89,14 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 70%;
+  width: 65%;
   height: 450px;
   background-color: black;
   padding: 10px;
   border-radius: 10px;
   margin-top: 30px;
-  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-left: 20px; /* Adjusted margin-left to move right */
 }
 
 .row {
@@ -78,8 +105,8 @@ main {
 }
 
 .can {
-  width: 40px;  /* 크기 조정 */
-  height: 50px;  /* 크기 조정 */
+  width: 40px;
+  height: 50px;
   background-color: white;
   border-radius: 3px;
   margin: 5px;
@@ -91,22 +118,23 @@ main {
 
 .label {
   position: absolute;
-  bottom: -25px;  /* 라벨 위치 조정 */
+  bottom: -25px;
   font-size: 12px;
-  color: white;  /* 라벨 색상 흰색으로 조정 */
+  color: white;
 }
 
-/* 동전 넣는 곳 스타일 */
+/* Coin slot styles */
 .coin-slot {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%;  /* 동전 넣는 부분 크기 조정 */
-  margin-left: 5px;
+  width: 25%;
+  margin-top: 30px;
 }
 
-.screen {
+.screen,
+.slot {
   width: 80px;
   height: 100px;
   background-color: #fff;
@@ -120,22 +148,19 @@ main {
 }
 
 .slot {
-  width: 80px;
   height: 30px;
   background-color: #000;
-  margin-bottom: 10px;
 }
 
 .coin-label {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
 
-/* 음료수 나오는 곳 스타일 */
+/* Output area styles */
 .output {
-  width: 70%;  /* products와 너비를 같게 설정 */
-  height: 50px;
+  width: 70%;
   background-color: #fff;
   border: 2px solid black;
   border-radius: 5px;
@@ -143,13 +168,15 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  height: 5vh;
 }
 
 .output-label {
   font-size: 16px;
   font-weight: bold;
 }
-
 .legs {
   display: flex;
   justify-content: space-around;
@@ -165,60 +192,238 @@ main {
   border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-  .vending-machine {
-    width: 80%;
-    height: auto;
-  }
-
-  .products {
-    height: auto;
-  }
-
-  .coin-slot {
-    margin-left: 10px;
-  }
-}
-/* Lamp container styles */
 .lamp-container {
-  position: absolute;
-  left: 20px; /* 자판기의 왼쪽 여백에 위치 */
-  top: 50%; /* 수직 가운데 정렬을 위한 기본 설정 */
-  transform: translateY(-50%);
   display: flex;
-  align-items: center; /* 세로 중앙 정렬 */
+  flex-direction: row;
+  justify-content: flex-end; /* Align lamps to the bottom */
+  align-items: center;
+  margin: 0 20px;
+  gap: 7.5vw;
 }
 
-.lamp-container div {
-  width: auto; /* 자식 요소 너비 자동 설정 */
-  display: flex;
-  justify-content: center;
-  margin-right: 10px; /* 각 이미지 사이의 간격 */
+.left-lamps {
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+.right-lamps {
+  margin-left: 0;
 }
 
 .lamp-container img {
-  width: auto;
+  width: 150px; /* Adjust size as needed */
   height: auto;
-  max-width: 30%; /* 이미지의 최대 너비 설정 */
-  max-height: 100%; /* 이미지의 최대 높이 설정 */
-  object-fit: contain;
-  margin-left: 10px; /* 이미지 비율을 유지하며 컨테이너에 맞추도록 설정 */
+  margin: 10px 0;
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
+.lamp-container.right-lamps {
+  gap: 3.5vw;
+}
+
+.animallamp {
+  background-image: url(../img/animallamp_non.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 42vh;
+}
+
+.timelamp {
+  background-image: url(../img/timelamp_none.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 37vh;
+}
+
+.radiationlamp {
+  background-image: url(../img/radiationlamp_non.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 41vh;
+}
+
+.spacelamp {
+  background-image: url(../img/spacelamp_non.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 40vh;
+}
+
+.crimelamp {
+  background-image: url(../img/crimelamp_non.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 40vh;
+}
+
+/* Media query for tablets and smaller devices */
+@media (max-width: 1279px) {
+  .vending-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Ensure the container takes the full height */
+  }
+
+  .vending-machine {
+    transform: scale(0.75);
+  }
+
   .lamp-container {
     flex-direction: row;
+    width: auto;
+    height: auto;
+    margin-top: 15vw;
+  }
+  .left-lamps {
+    margin-right: 0;
+    margin-left: 1.8vw;
+  }
+  .lamp-container img,
+  .lamp-container .timelamp,
+  .lamp-container .radiationlamp,
+  .lamp-container .spacelamp,
+  .lamp-container .animallamp,
+  .lamp-container .crimelamp {
+    height: 28vh;
+    margin: 0 1vw;
+  }
+  /* 
+  .left-lamps,
+  .right-lamps {
+    justify-content: center;
+  } */
+}
+@media (max-width: 1000px) {
+  .vending-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Ensure the container takes the full height */
+  }
+  .lamp-container.right-lamps {
+    gap: 0.5vw;
+  }
+
+  .vending-machine {
+    transform: scale(0.75);
+  }
+
+  .lamp-container {
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    margin-top: 15vw;
+  }
+  .left-lamps {
+    margin-right: 0;
+    margin-left: 1.8vw;
+  }
+  .lamp-container img,
+  .lamp-container .timelamp,
+  .lamp-container .radiationlamp,
+  .lamp-container .spacelamp,
+  .lamp-container .animallamp,
+  .lamp-container .crimelamp {
+    height: 28vh;
+    margin: 0 1vw;
+  }
+  .machine {
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0;
+  }
+  /* 
+  .left-lamps,
+  .right-lamps {
+    justify-content: center;
+  } */
+}
+@media (max-width: 768px) {
+  .vending-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Ensure the container takes the full height */
+  }
+
+  .vending-machine {
+    transform: scale(0.75);
+  }
+
+  .lamp-container {
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    margin-top: 15vw;
+  }
+  .left-lamps {
+    margin-right: 0;
+    margin-left: 1.8vw;
+  }
+  .lamp-container img,
+  .lamp-container .timelamp,
+  .lamp-container .radiationlamp,
+  .lamp-container .spacelamp,
+  .lamp-container .animallamp,
+  .lamp-container .crimelamp {
+    height: 28vh;
+    margin: 0 1vw;
+  }
+  /* 
+  .left-lamps,
+  .right-lamps {
+    justify-content: center;
+  } */
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+  .vending-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Ensure the container takes the full height */
+  }
+
+  .vending-machine {
+    transform: scale(0.6);
+    margin: 1vw 0;
+  }
+
+  .lamp-container {
+    padding-top: 5vw;
+    flex-direction: row;
+    width: 100%;
     justify-content: space-around;
-    left: 10px; /* 모바일에서 자판기의 왼쪽 여백에 위치 */
+    margin: 1vw 0;
+    height: auto; /* Ensure the lamp container fits within the height */
   }
 
-  .lamp-container div {
-    margin-right: 0; /* 모바일에서 이미지 사이의 간격 제거 */
-    margin-bottom: 10px; /* 모바일에서 각 이미지 사이의 간격 */
+  .lamp-container img,
+  .lamp-container .timelamp,
+  .lamp-container .radiationlamp,
+  .lamp-container .spacelamp,
+  .lamp-container .animallamp,
+  .lamp-container .crimelamp {
+    width: 15vw;
+    height: 25vh; /* Adjusted height to fit within the viewport */
+    margin: 0 0.5vw;
   }
 
-  .lamp-container img {
-    max-width: 10%; /* 모바일에서 이미지의 최대 너비 설정 */
-    max-height: auto; /* 모바일에서 이미지의 최대 높이 자동 설정 */
+  .left-lamps,
+  .right-lamps {
+    justify-content: center;
   }
 }

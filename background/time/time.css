@@ -1,10 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
   background-color: black;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-/* ! 폰트  ! */
+
 .press-start-2p-regular {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
+  color: green;
+  white-space: pre-wrap;
+}
+
+.binary-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.binary-text span {
+  padding: 2px 4px; /* padding으로 간격 조정 */
+}
+
+.hidden {
+  visibility: hidden;
 }

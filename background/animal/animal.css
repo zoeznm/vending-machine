@@ -1,25 +1,39 @@
 body {
   margin: 0;
-	position: relative;
-	background: repeating-linear-gradient(
-		180deg,
-		#d0e3ff,
-		#d0e3ff 15px,
-		white 10px,
-		white 30px
-	);
-	background-attachment: fixed;
+  position: relative;
+  background: repeating-linear-gradient(
+    180deg,
+    #d0e3ff,
+    #d0e3ff 15px,
+    white 10px,
+    white 30px
+  );
+  background-attachment: fixed;
 }
-.cloud1 {
+
+.cloud1, .cloud2 {
   position: absolute;
   top: 10px;
+}
+
+.cloud1 {
   right: 30px;
 }
+
 .cloud2 {
-  position: absolute;
-  top: 10px;
   left: 30px;
 }
+
+@keyframes moveCloud1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(500px); }
+}
+
+@keyframes moveCloud2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-500px); }
+}
+
 .grass1 {
   position: absolute;
   top: 628px;
@@ -28,6 +42,7 @@ body {
   background-color: lightgreen;
   border-radius: 0px 100% 0px 0px;
 }
+
 .grass2 {
   position: absolute;
   right: 0px;

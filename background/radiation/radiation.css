@@ -1,12 +1,12 @@
 body {
   margin: 0;
-	position: relative;
-	background: repeating-linear-gradient(
-		180deg,
-		#fbff1a,
-		#fbff1a 50px,
-		rgb(0, 0, 0) 50px,
-		rgb(0, 0, 0) 100px
-	);
-	background-attachment: fixed;
+  position: relative;
+  background: repeating-linear-gradient(
+    135deg, /* 대각선 반대 방향 */
+    #fbff1a,
+    #fbff1a 50px,
+    rgb(0, 0, 0) 50px,
+    rgb(0, 0, 0) 100px
+  );
+  background-attachment: fixed;
 }

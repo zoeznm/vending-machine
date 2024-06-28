@@ -32,9 +32,9 @@ body {
 }
 
 .sun {
-  max-width: 8%;
+  max-width: 8vw;
   height: auto;
-  margin-left: 50px;
+  margin-left: 70vw;
   transition: transform 0.3s ease-in-out;
   position: absolute;
   right: 3vw;

@@ -359,4 +359,34 @@ main {
 
   .lamp-container img,
   .lamp-container .timelamp,
-  .lamp-con
+  .lamp-container .radiationlamp,
+  .lamp-container .spacelamp,
+  .lamp-container .animallamp,
+  .lamp-container .crimelamp {
+    width: 15vw;
+    height: 25vh; /* Adjusted height to fit within the viewport */
+    margin: 0 0.5vw;
+    display: block; /* Ensure images are always displayed */
+  }
+
+  .left-lamps,
+  .right-lamps {
+    justify-content: center;
+    display: flex; /* Ensure right-lamps are displayed */
+  }
+
+  .right-lamps {
+    display: flex !important; /* Ensure right-lamps are displayed */
+  }
+}
+
+@media (max-width: 600px) {
+  .spacelamp, .timelamp, .animallamp, .radiationlamp, .crimelamp {
+      display: block !important; /* Ensure images are always displayed */
+  }
+
+  img {
+      flex: 1 1 auto; /* Ensure images are always displayed */
+      display: block;
+  }
+}

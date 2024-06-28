@@ -6,6 +6,7 @@ html {
   width: 100vw;
   height: 100vh;
   font-family: Arial, sans-serif;
+  overflow: visible;
 }
 
 body {
@@ -78,7 +79,6 @@ main {
 
 .machine {
   padding-top: 35px;
-
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -177,6 +177,7 @@ main {
   font-size: 16px;
   font-weight: bold;
 }
+
 .legs {
   display: flex;
   justify-content: space-around;
@@ -197,28 +198,28 @@ main {
   flex-direction: row;
   justify-content: flex-end; /* Align lamps to the bottom */
   align-items: center;
-  margin: 0 20px;
-  gap: 7.5vw;
+  margin: 0 50px;
+  gap: 3vw;
 }
 
 .left-lamps {
-  margin-right: 20px;
+  margin-right: 0px;
   margin-left: 0;
 }
 
 .right-lamps {
-  margin-left: 0;
+  margin-left: 10px;
 }
 
 .lamp-container img {
   width: 150px; /* Adjust size as needed */
   height: auto;
-  margin: 10px 0;
+  margin: 8px 0;
   transition: transform 0.3s ease-in-out;
 }
 
 .lamp-container.right-lamps {
-  gap: 3.5vw;
+  gap: 2vw;
 }
 
 .animallamp {
@@ -228,13 +229,29 @@ main {
   width: 6vw;
   height: 42vh;
 }
-
+.animallamplight {
+  display: none;
+  background-image: url(../img/animallamp_light.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 42vh;
+  display: none;
+}
 .timelamp {
   background-image: url(../img/timelamp_none.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 6vw;
   height: 37vh;
+}
+.timelamplight {
+  background-image: url(../img/timelamp_light.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 37vh;
+  display: none;
 }
 
 .radiationlamp {
@@ -244,13 +261,29 @@ main {
   width: 6vw;
   height: 41vh;
 }
+.radiationlamplight {
+  background-image: url(../img/radiaitonlamp_light.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 41vh;
+  display: none;
+}
 
 .spacelamp {
   background-image: url(../img/spacelamp_non.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 6vw;
+  width: 5vw;
   height: 40vh;
+}
+.spacelamplight {
+  background-image: url(../img/spacelamp_light.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 5vw;
+  height: 40vh;
+  display: none;
 }
 
 .crimelamp {
@@ -259,6 +292,14 @@ main {
   background-repeat: no-repeat;
   width: 6vw;
   height: 40vh;
+}
+.crimelamplight {
+  background-image: url(../img/crimelamp_light.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6vw;
+  height: 40vh;
+  display: none;
 }
 
 /* Media query for tablets and smaller devices */
@@ -285,106 +326,10 @@ main {
     margin-right: 0;
     margin-left: 1.8vw;
   }
-  .lamp-container img,
-  .lamp-container .timelamp,
-  .lamp-container .radiationlamp,
-  .lamp-container .spacelamp,
-  .lamp-container .animallamp,
-  .lamp-container .crimelamp {
-    height: 28vh;
-    margin: 0 1vw;
-  }
-  /* 
-  .left-lamps,
+
   .right-lamps {
-    justify-content: center;
-  } */
-}
-@media (max-width: 1000px) {
-  .vending-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%; /* Ensure the container takes the full height */
-  }
-  .lamp-container.right-lamps {
-    gap: 0.5vw;
-  }
-
-  .vending-machine {
-    transform: scale(0.75);
-  }
-
-  .lamp-container {
-    flex-direction: row;
-    width: auto;
-    height: auto;
-    margin-top: 15vw;
-  }
-  .left-lamps {
-    margin-right: 0;
     margin-left: 1.8vw;
   }
-  .lamp-container img,
-  .lamp-container .timelamp,
-  .lamp-container .radiationlamp,
-  .lamp-container .spacelamp,
-  .lamp-container .animallamp,
-  .lamp-container .crimelamp {
-    height: 28vh;
-    margin: 0 1vw;
-  }
-  .machine {
-    padding-top: 35px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 0;
-  }
-  /* 
-  .left-lamps,
-  .right-lamps {
-    justify-content: center;
-  } */
-}
-@media (max-width: 768px) {
-  .vending-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%; /* Ensure the container takes the full height */
-  }
-
-  .vending-machine {
-    transform: scale(0.75);
-  }
-
-  .lamp-container {
-    flex-direction: row;
-    width: auto;
-    height: auto;
-    margin-top: 15vw;
-  }
-  .left-lamps {
-    margin-right: 0;
-    margin-left: 1.8vw;
-  }
-  .lamp-container img,
-  .lamp-container .timelamp,
-  .lamp-container .radiationlamp,
-  .lamp-container .spacelamp,
-  .lamp-container .animallamp,
-  .lamp-container .crimelamp {
-    height: 28vh;
-    margin: 0 1vw;
-  }
-  /* 
-  .left-lamps,
-  .right-lamps {
-    justify-content: center;
-  } */
 }
 
 /* Media query for mobile phones */
@@ -413,17 +358,4 @@ main {
 
   .lamp-container img,
   .lamp-container .timelamp,
-  .lamp-container .radiationlamp,
-  .lamp-container .spacelamp,
-  .lamp-container .animallamp,
-  .lamp-container .crimelamp {
-    width: 15vw;
-    height: 25vh; /* Adjusted height to fit within the viewport */
-    margin: 0 0.5vw;
-  }
-
-  .left-lamps,
-  .right-lamps {
-    justify-content: center;
-  }
-}
+  .lamp-container .radiationlamp,

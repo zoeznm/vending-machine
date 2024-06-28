@@ -14,10 +14,15 @@
       </div>
       <div class="vending-container">
         <div class="lamp-container left-lamps">
-          <div class="timelamp"></div>
-          <div class="radiationlamp"></div>
-          <!-- <img src="../img/timelamp_none.png" alt="Lamp">
-        <img src="../img/timelamp_none.png" alt="Lamp"> -->
+          <div class="radiationlamp">
+            <div class="radiationlamplight"></div>
+          </div>
+          <div class="animallamp">
+            <div class="animallamplight"></div>
+          </div>
+          <div class="crimelamp">
+            <div class="crimelamplight"></div>
+          </div>
         </div>
         <div class="vending-machine">
           <div class="machine">
@@ -76,22 +81,15 @@
           </div>
         </div>
         <div class="lamp-container right-lamps">
-          <div class="spacelamp"></div>
-          <div class="animallamp"></div>
-          <div class="crimelamp"></div>
-          <!-- <img src="../img/timelamp_none.png" alt="Lamp">
-        <img src="../img/timelamp_none.png" alt="Lamp">
-        <img src="../img/timelamp_none.png" alt="Lamp"> -->
+          <div class="timelamp">
+            <div class="timelamplight"></div>
+          </div>
+          <div class="spacelamp">
+            <div class="spacelamplight"></div>
+          </div> 
         </div>
       </div>
     </main>
   </body>
-  <script>
-    const sun = document.querySelector(".sun");
-    const can = document.querySelector(".can");
-
-    sun.addEventListener("click", () => {
-      can.style.backgroundColor = "red";
-    });
-  </script>
+  <script src="de.js"></script>
 </html>

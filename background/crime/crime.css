@@ -54,24 +54,52 @@ body {
 .police-line {
   position: absolute;
   color: #000000; /* Red color for the text */
-  animation: moveLeftRight 40s linear infinite; /* Animation properties */
+  -moz-animation: animateCloud 150s linear infinite;
+  -webkit-animation: animateCloud 150s linear infinite;
+  animation: animateCloud 300s linear infinite; /* Animation properties */
+}
+
+/* @keyframes moveLeftRight {
+  0% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(100%); 
+  }
 }
 
 @keyframes moveLeftRight {
   0% {
-    transform: translateX(-100%); /* Start position */
+    left: -100%;
   }
   100% {
-    transform: translateX(100%); /* End position */
+    left: 100%; 
+  }
+} */
+@-webkit-keyframes animateCloud {
+  0% {
+      margin-left: -100px;
+  }
+  100% {
+      margin-left: 100%;
   }
 }
-/* Keyframes for animation */
-@keyframes moveLeftRight {
+
+@-moz-keyframes animateCloud {
   0% {
-    left: -100%; /* Start position */
+      margin-left: -100px;
   }
   100% {
-    left: 100%; /* End position */
+      margin-left: 100%;
+  }
+}
+
+@keyframes animateCloud {
+  0% {
+      margin-left: -100px;
+  }
+  100% {
+      margin-left: 100%;
   }
 }
 .blood-stain2{

@@ -9,9 +9,9 @@
 body {
   background-color: rgb(110, 110, 110);
   background-image: linear-gradient(335deg, #000000 23px, transparent 23px),
-  linear-gradient(155deg, #000000 23px, transparent 23px),
-  linear-gradient(335deg, #000000 23px, transparent 23px),
-  linear-gradient(155deg, #000000 23px, transparent 23px);
+    linear-gradient(155deg, #000000 23px, transparent 23px),
+    linear-gradient(335deg, #000000 23px, transparent 23px),
+    linear-gradient(155deg, #000000 23px, transparent 23px);
   background-size: 58px 58px;
   background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
   height: 100vh;
@@ -19,30 +19,60 @@ body {
   overflow: hidden;
 }
 
-.police-tape {
+.police-tape--1 {
   background-color: #ffcd18;
-  background: linear-gradient(180deg, lighten(#B79A2F, 20%) 0%, #B79A2F 5%, #B79A2F 90%, lighten(#B79A2F, 5%) 95%, darken(#B79A2F, 50%) 100%);
-  padding: 0.125em;
+  padding: 0.5em 5em 1.5em 1em;
+  font-size: 3em;
+  width: 120vw;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 2; /* Police tape in front of blood stain */
+  overflow: hidden; /* Hide overflowing text */
+  top: 40%;
+  left: -5%; /* Fixed position */
+ /* Fixed position */
+  transform: rotate(10deg); /* Fixed rotation */
+}
+.police-tape--2 {
+  background-color: #ffcd18;
+  padding: 0.5em 5em 1.5em 3em;
+  width: 120vw;
+
   font-size: 3em;
   text-align: center;
   white-space: nowrap;
   position: absolute;
   z-index: 2; /* Police tape in front of blood stain */
-}
-
-.police-tape--1 {
-  transform: rotate(10deg);
+  overflow: hidden; /* Hide overflowing text */
   top: 40%;
-  left: -5%;
   right: -5%;
-  margin-top: 0;
+/* Fixed position */
+/* Fixed position */
+  transform: rotate(-10deg); /* Fixed rotation */
+}
+.police-line {
+  position: absolute;
+  color: #000000; /* Red color for the text */
+  animation: moveLeftRight 40s linear infinite; /* Animation properties */
 }
 
-.police-tape--2 {
-  transform: rotate(-8deg);
-  top: 50%;
-  left: -5%;
-  right: -5%;
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(-100%); /* Start position */
+  }
+  100% {
+    transform: translateX(100%); /* End position */
+  }
+}
+/* Keyframes for animation */
+@keyframes moveLeftRight {
+  0% {
+    left: -100%; /* Start position */
+  }
+  100% {
+    left: 100%; /* End position */
+  }
 }
 .blood-stain2{
   opacity: 0.8;
